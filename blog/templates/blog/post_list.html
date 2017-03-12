@@ -7,15 +7,13 @@
 	<body>
 		<h1>Yaay ! my blog !!!</h1>
 
+		{% for post in posts %}
 		<div>
-			<h2>:P</h2>
-			<p>.....</p>
+		<h5>published: {{post.published_date}}</h5>
+		<h1><a href="">{{post.title}}</a></h1>
+		<h3>{{post.text|linebreaksbr}}</h3>
 		</div>
-
-		<div>
-			<h2>:)</h2>
-			<p>(just for tests ;))</p>
-		</div>
+		{% endfor %}
 
 	</body>
 </html>
